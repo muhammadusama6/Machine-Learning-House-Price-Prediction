@@ -1,0 +1,21 @@
+Problem: The problem being solved is to predict the median house value of a given location based on various features of that location, 
+         such as the number of rooms, bedrooms, population, households, etc.
+
+Dataset: The dataset used is called "housing.csv" and it contains information about various locations in California, including median house value, 
+         median income, housing median age, total rooms, total bedrooms, population, households, and ocean proximity.
+
+Preprocessing: In the script, the first step is to remove any rows with missing values. Then, it takes the natural logarithm of certain columns 
+               (total rooms, total bedrooms, population, and households) to improve the distribution of the data. Next, it creates dummy variables 
+               for the "ocean_proximity" column, which is a categorical variable, and drops the original "ocean_proximity" column. These preprocessing 
+               steps are done on both the training and testing data.
+
+Model Selection and Evaluation: The script uses the LinearRegression class from the scikit-learn library to fit a linear regression model to the training 
+                                data. The model is evaluated using the test data by finding the R-squared score, which is a measure of how well the model 
+                                fits the data. A score of 1.0 indicates a perfect fit and a score of 0.0 indicates that the model does not fit the data 
+                                at all.
+
+Results and Conclusions: The final line of code in the script prints out the R-squared score of the model on the test data, which is a measure of how 
+                         well the model is able to predict the median house value of a given location based on the other features of that location. 
+                         Based on this score and other evaluation metric, we can conclude how well the model is performing.
+                         
+Model tuning was not done and the model accuracy was 0.6797. Its not too good. But it was a beginner level project. 
